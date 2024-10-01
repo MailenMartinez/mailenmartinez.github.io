@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: end;
     position: absolute;
+    z-index: 100;
     background-color: #5D3FD3;
     left: 0;
     top: 0;
@@ -213,9 +214,9 @@
   font-weight: lighter;
   text-align: center;
   background-color: #7c7c7db7; /* Fondo semitransparente */
-  padding: 10px;
+  padding: 6px;
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -308,6 +309,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .carousel{
@@ -350,9 +352,7 @@
     text-align: center;
     border: 0;
     cursor: pointer;
-    position: absolute; /* Asegura que los botones estén fuera del flujo normal */
-    top: 50%; /* Ajusta esto según tu diseño */
-    transform: translateY(-50%); /* Centra verticalmente */    
+    
   }
 
   .carrusel-arrow:focus{
@@ -395,6 +395,7 @@
       background: #5D3FD3;
       border-radius: 0 0 10px 10px;
       position: absolute;
+      z-index: 100;
       font-family: "bungee";
       color: #1ABC9C;
       top: 60px;
