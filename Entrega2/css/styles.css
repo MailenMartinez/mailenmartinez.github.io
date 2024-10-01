@@ -413,7 +413,12 @@
   filter: blur(5px);
 }
 
-
+.cont-all{/*Agregué este div que contiene todos los elementos de la pagina para que esten centrados*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 
 
