@@ -379,7 +379,7 @@
 /*contenedor de la info sobre la visualizacion del juego*/
 .cont-texto-4enlinea{
   width: 1350px;
-  height: 80px;
+  height: 80px; 
   background-color: #b0b0b0;
 }
 /*seguimiento de navegacion*/
