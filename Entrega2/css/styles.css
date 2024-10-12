@@ -430,7 +430,15 @@
   align-items: center;
 }
 .info-compartir{
-  display: none;
+  visibility: hidden;
+  width: 518px;
+  height: 466px;
+}
+.info-compartir.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+  z-index: 50;
 }
 
 .como-jugar {
