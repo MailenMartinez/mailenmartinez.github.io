@@ -419,6 +419,38 @@
   justify-content: center;
   flex-direction: column;
 }
+/*contenido debajo de la visualizacion dell juego*/
+
+/*boton con el que clickeo y me abre la seccion de compartir*/
+.cont-compartir{
+  width: 1000px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-compartir{
+  display: none;
+}
+
+.como-jugar {
+  width: 1000px;
+  height: 210px;
+}
+.titulo-como-jugar{
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+
+
+.cont-gameplays {
+  width: 1000px;
+  height: 210px;
+}
+.titulo-gameplays{
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
 
 
 
