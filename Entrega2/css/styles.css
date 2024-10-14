@@ -500,6 +500,7 @@
   display: flex;
   justify-content: space-around;
   margin: 15px 0;
+  flex-direction: row;
 }
 
 /*input donde va a estar el link del juego*/
@@ -568,7 +569,8 @@
 .gameplays-img{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 .gameplays-img .gameplay-image {
   width: 200px;
