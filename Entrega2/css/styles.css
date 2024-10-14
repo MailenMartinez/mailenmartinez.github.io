@@ -438,7 +438,7 @@
   border: none;
   font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -448,8 +448,17 @@
   gap: 6px;
   width: 140px;
   height: 39px;
+  margin-top: 5px;
 }
 
+/*boton cerrar  compaetir*/
+.close-compartir-btn{
+  color: #FFFFFF;
+  background: none;
+  font-family: 'Bungee';
+  font-size: 14px;
+
+}
 .cont-compartir{
   width: 1000px;
   height: 55px;
@@ -520,9 +529,19 @@
   width: 1000px;
   height: 210px;
 }
+.como-jugar p{
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  color: #FFFFFF; 
+  margin-left: 10px;
+}
 .titulo-como-jugar{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #FFFFFF;
   padding-bottom: 10px;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  color: #FFFFFF;
+  margin: 10px;
 }
 
 
@@ -531,8 +550,11 @@
   height: 210px;
 }
 .titulo-gameplays{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #FFFFFF;
   padding-bottom: 10px;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  color: #FFFFFF;
+  margin: 10px;
 }
 
 
