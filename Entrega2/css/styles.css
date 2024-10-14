@@ -380,12 +380,22 @@
 .cont-texto-4enlinea{
   width: 1350px;
   height: 80px; 
-  background-color: #b0b0b0;
+}
+.cont-texto-4enlinea h2{
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+ /* font-weight: 800;*/
+  transition: background-color 0.3s ease;
+  color: #9747FF ;
+}
+.cont-texto-4enlinea span{
+  color: #1ABC9C;
 }
 /*seguimiento de navegacion*/
 .seguimiento-list{
   display: flex;
   flex-direction: row;
+  list-style: none;
+  
 }
 
 /*contenido principal*/
@@ -423,7 +433,7 @@
 
 /*boton con el que clickeo y me abre la seccion de compartir*/
 .open-compartir-btn {
-  background-color: #5D3FD3; /* Color primario del botón */
+  background-color: #9747FF; /* Color primario del botón */
   color: white;
   border: none;
   font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
