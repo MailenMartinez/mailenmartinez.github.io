@@ -245,14 +245,13 @@
 
 /* Icono del carrito */
 .cart-icon {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
-  width: 33px;
-  height: 33px;
-  border-radius: 0 12px 0 12px;
+  width: 39px;
+  height: 39px;
+  border-radius: 15px;
   background-color: rgba(151, 71, 255, 0.77);
   font-size: 20px;
 }
@@ -710,4 +709,40 @@
     .carousel-track{
       gap: 12px;
     }
+
+    /*footer*/
+    .footer {
+      margin-top: 10rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #59595B;
+      color: #ffffff;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .footer-column {
+      flex: 1;
+      margin: 10px 20px;
+  }
+  
+  .footer-column ul {
+      list-style-type: disc; /* Agrega puntos a las listas */
+      padding-left: 20px; /* Espacio de indentación para las listas */
+  }
+  
+  .footer-column li {
+      margin-bottom: 10px; /* Espacio entre elementos de la lista */
+  }
+  
+  .footer-column > ul > li {
+      font-weight: bold; /* Títulos en negrita */
+      margin-bottom: 15px; /* Espacio entre el título y los elementos de la lista */
+  }
+  .footer-column h2 {
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+  }
+    /*footer*/
   }
