@@ -461,6 +461,10 @@
   height: 39px;
   margin-top: 5px;
 }
+.open-compartir-btn:hover{
+  background-color: #E684FF;
+  transform: translateY(-3px);
+}
 
 /*boton cerrar  compaetir*/
 .close-compartir-btn{
@@ -516,6 +520,10 @@
   font-family: 'Roboto', 'Regular', sans-serif;
   font-size: 12px;
   color: #FFFFFF;
+}
+.cont-iconosYtitulo img:hover{
+  transform: translateY(-2px);
+  box-shadow: #737373;
 }
 
 /*input donde va a estar el link del juego*/
