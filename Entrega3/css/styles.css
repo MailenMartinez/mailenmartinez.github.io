@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bungee&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #2C2C2C 0%, #484848 100%);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  /*Comienzo nav*/
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #59595B;
+    padding: 10px;
+    height: 60px;
+  }
+  
+  .burger-menu {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    z-index: 100;
+    background-color: #5D3FD3;
+    left: 0;
+    top: 0;
+    padding: 2rem;
+    height: 100%;
+    gap: 1rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+  }
+  
+  .burger-menu.visible{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+  }
+
+  .open-menu, .close-menu{
+    display: block;
+    border: 0;
+    font-size: 30px;
+    background: none;
+    cursor: pointer;
+  }
+
+  .open-menu{
+    color: #1ABC9C;
+  }
+  
+  .close-menu{
+    color: #e05555;
+  }
+
+  .menu-usuario{
+    display: none;
+  }
+
+  .close-menu:hover{
+    color: #ff6e6e;
+  }
+
+  .nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    list-style-type: none;
+    gap: 1rem;
+    top: 0;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: #1ABC9C;
+    font-family: 'Bungee';
+    font-size: 18px;
+    transition: ease .3s;
+  }
+
+  .nav-list li a:hover{
+    color: #2EE6B6;
+    transition: ease-in .1s;
+  }
+
+
+  .search-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B7B7B;
+    border-radius: 20px;
+    padding: 5px 10px;
+    max-width: fit-content;
+  }
+  
+  .search-container input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .search-container input::placeholder{
+    color:#59595B;
+  }
+  
+  .search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #b0b0b0;
+  }
+
+  .search-icon{
+    font-size: 20px;
+    padding-right: 5px;
+    color: #E1DEDE;
+    transition: ease-in .1s;
+  }
+
+  .search-icon:hover{
+    color: #FFFFFF;
+    scale: 1.1;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #ff6e6e;
+    text-align: right;
+    margin-left: 2rem;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  
+  .logo span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6e6e;
+  }
+
+  /*Fin nav*/
+  
+  /* Estilos generales de la card */
+/* Estilos generales de la card */
+.game-card {
+  position: relative;
+  width: 230px; /* Ajusta según tu diseño */
+  height: 150px;
+  overflow: visible;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.game-card a {
+  text-decoration: none;
+}
+
+/* Imagen del juego */
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: filter 0.5s ease-in
+}
+
+/* Efecto de desenfoque al hacer hover en la card */
+.game-card:hover .game-image {
+  filter: blur(1px); /* Aplica un desenfoque */
+}
+
+/* Overlay que aparece al hacer hover */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.game-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Posiciona el título del juego en la parte superior */
+
+
+/* Botón de play */
+.play-button {
+  background-color: #5D3FD3; /* Color primario del botón */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  gap: 6px;
+  width: 140px;
+  height: 39px;
+}
+
+
+
+
+.play-button:hover {
+  background-color: #9747FF; /* Color de hover */
+}
+
+/*.cart-price-section {
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}*/
+
+/* Icono del carrito */
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 15px;
+  background-color: rgba(151, 71, 255, 0.77);
+  font-size: 20px;
+}
+.cart-icon i{
+  margin-right: 5px;
+}
+/* Precio */
+.price-tag {
+  position: absolute;
+  top: 29px;
+  left:-8px;
+  height: 33px;
+  width: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 12px 0 12px 0;
+  font-size: 13px;
+  font-family: 'Bungee';
+  text-align: center;
+}
+
+.price-tag span{
+  position: absolute;
+  font-size: 12px;
+}
+
+
+/*Fin card*/
+
+
+/*Carruseles*/
+
+  .carruseles{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+
+
+  .carousel h2{
+    font-family: 'Roboto';
+    color: #D9D9D9;
+    margin-left: 2rem;
+  }
+
+  .hover-overlay h2 {
+    position: absolute;
+    font-family: "Bungee";
+    color: #FFFFFF;
+    top: 0;
+    left: 0;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    text-align: center;
+    background-color: #7c7c7db7; /* Fondo semitransparente */
+    padding: 6px;
+    margin: 0;
+    font-size: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .carousel-list{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 150px;
+    gap: 1rem;
+  }
+
+  .carousel-track{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    top: 0;
+    gap: .5rem;
+    transition: left .5s ease;
+  }
+
+
+  .carrusel-arrow{
+    background-color: #5d3fd38d;
+    z-index: 4;
+    width: 30px;
+    height: 150px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    transition: .1s;
+  }
+
+  .carrusel-arrow:focus{
+    outline: 0;
+  }
+
+  .carrusel-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: #FFFFFF;
+  }
+
+  .carrusel-arrow > svg:hover{
+    transform: scale(1.5);
+    transition: ease .1s;
+  }
+
+  .carrusel-prev{
+    left: 0;
+  }
+  .carrusel-next{
+    right: 0;
+  }
+/*Fin carruseles*/
+
+
+/* 4 en linea*/
+
+/*contenedor de la info sobre la visualizacion del juego*/
+.cont-texto-4enlinea{
+  width: 1350px;
+  height: 80px; 
+  display: flex;
+}
+.cont-texto-4enlinea img{
+  margin: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 68px;
+  height: 68px;
+}
+
+
+.cont-texto-4enlinea h2{
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  color: #9747FF ;
+}
+.cont-texto-4enlinea span{
+  color: #1ABC9C;
+}
+/*seguimiento de navegacion*/
+.seguimiento-list{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;  
+}
+
+/*contenido principal*/
+.container-juego {
+  width: 1350px;
+  height: 620px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.publicidad {
+  width: 235px;
+  height: 620px;
+  background-color: #484848;
+
+}
+/*Donde se va a visualizar el 4 en linea*/
+.cont-4enlinea {
+  width: 880px;
+  height: 620px;
+}
+.juego-image { 
+  height: 100%;
+  width: 100%;
+  filter: blur(5px);
+}
+
+.cont-all{/*Agregué este div que contiene todos los elementos de la pagina para que esten centrados*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/*Contenido debajo de la visualizacion del juego*/
+
+/*boton con el que clickeo y me abre la seccion de compartir*/
+.open-compartir-btn {
+  background-color: #9747FF; /* Color primario del botón */
+  color: white;
+  border: none;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 140px;
+  height: 39px;
+  margin-top: 5px;
+}
+.open-compartir-btn:hover{
+  background-color: #E684FF;
+  transform: translateY(-3px);
+}
+
+/*boton cerrar  compaetir*/
+.close-compartir-btn{
+  color: #FFFFFF;
+  background: none;
+  font-family: 'Bungee';
+  font-size: 14px;
+
+}
+.cont-compartir{
+  width: 1000px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-compartir{
+  visibility: hidden;
+  width: 518px;
+  height: 466px;
+  background-color: #484848;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.info-compartir h3{
+  width: 518px;
+  height: 47px;
+  text-align: center;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  font: 30px;
+  color: #FFFFFF;
+}
+
+/*cuando aprieto compartir*/
+.info-compartir.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+  z-index: 50;
+}
+.cont-iconos-compartir{
+  width: 470px;
+  height: 202px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  flex-direction: row;
+  margin-top: 60px;
+}
+.cont-iconosYtitulo{
+  text-align: center;
+  font-family: 'Roboto', 'Regular', sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.cont-iconosYtitulo img:hover{
+  transform: translateY(-2px);
+  box-shadow: #737373;
+}
+
+/*input donde va a estar el link del juego*/
+.cont-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  width: 470px;
+  height: 53px;
+  background-color: #2C2C2C;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.cont-link input {
+  border: none;
+  background: none;
+  color: white;
+  width: 80%;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.copy-btn{
+  background-color: #7d3cff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+  margin: 5px;
+}
+.como-jugar {
+  width: 1000px;
+  height: 210px;
+}
+.como-jugar p{
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  color: #FFFFFF; 
+  margin-left: 10px;
+}
+.titulo-como-jugar{
+  display: flex;
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 10px;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  color: #FFFFFF;
+  margin: 10px;
+}
+
+
+.cont-gameplays {
+  width: 1000px;
+  height: 210px;
+}
+.titulo-gameplays{
+  display: flex;
+  border-bottom: 2px solid #FFFFFF;
+  padding-bottom: 10px;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  color: #FFFFFF;
+  margin: 10px;
+}
+.gameplays-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.gameplays-img .gameplay-image {
+  width: 200px;
+  height: 110px;
+}
+.cont-comentarios{
+  width: 1000px;
+  height: 210px;
+}
+.cont-comentarios h3{
+
+  padding-bottom: 10px;
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  color: #FFFFFF;
+  margin: 10px;
+}
+.cont-comentarios p{
+  font-family: 'Roboto', 'Condensed ExtraBold', sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  color: #FFFFFF;
+  margin-top: 10px; 
+  margin-left: 10px;
+}
+
+.comentario {
+  width: 858px;
+  height: 172px;
+  background-color: #686868;
+  margin-top: 30px;
+}
+.titulo-comentario{
+  font-family: 'Roboto', 'Bold', sans-serif;
+  transition: background-color 0.3s ease;
+  color: #FFFFFF;
+  padding: 20px;
+  font-size: 18px ;
+  height: 47px;
+
+}
+
+.invisible{
+  display: none;
+}
+
+
+/*Breakpoint Desktop*/
+  @media (min-width: 1024px) {
+
+    .search-container {
+      max-width: 300px; 
+    }
+    .search-container input {
+      font-size: 16px;
+    }
+    .nav-list li a {
+      font-size: 25px;
+    }
+    .menu-usuario{
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      background: #5D3FD3;
+      border-radius: 0 0 10px 10px;
+      position: absolute;
+      z-index: 100;
+      font-family: "bungee";
+      color: #1ABC9C;
+      top: 60px;
+      right: 2rem;
+      padding: 2rem;
+      gap: 1rem;
+      transition: opacity 0.3s ease, visibility 0s 0.3s;
+    }
+
+    .menu-usuario.visible{
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+    .div-user{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      border-radius: 20px;
+      right: 2rem;
+      width: 40px;
+      height: 40px;
+      background-color: #5D3FD3;
+    }
+    .open-user{
+      margin: auto;
+      color: #1ABC9C;
+      font-size: 30px;
+      transition: ease .3s;
+    }
+    .open-user:hover{
+      color:#2EE6B6;
+      transition: ease-in .2s;
+    }
+    .carruseles{
+      margin-top: 4rem;
+    }
+    .carousel-list{
+      max-width: 100vw;
+    }
+    .carousel-track{
+      gap: 12px;
+    }
+
+    /*footer*/
+    .footer {
+      margin-top: 10rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #59595B;
+      color: #ffffff;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .footer-column {
+      flex: 1;
+      margin: 10px 20px;
+  }
+  
+  .footer-column ul {
+      list-style-type: disc; /* Agrega puntos a las listas */
+      padding-left: 20px; /* Espacio de indentación para las listas */
+  }
+  
+  .footer-column li {
+      margin-bottom: 10px; /* Espacio entre elementos de la lista */
+  }
+  
+  .footer-column > ul > li {
+      font-weight: bold; /* Títulos en negrita */
+      margin-bottom: 15px; /* Espacio entre el título y los elementos de la lista */
+  }
+  .footer-column h2 {
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+  }
+    /*footer*/
+  }
