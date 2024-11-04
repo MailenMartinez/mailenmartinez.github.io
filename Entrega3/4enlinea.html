@@ -60,18 +60,23 @@
                 
             </div>
             <div class="cont-4enlinea">
-                <img src="assets/images/4enlinea.jpg" alt="" class="juego-image">
+                <div class="cont-4enlinea">
+                    <canvas id="gameMenuCanvas" width="880" height="620"></canvas>
+                    <canvas id="gameCanvas" width="880" height="620" style="display: none;"></canvas>
+                </div>
             </div>
             <div class="publicidad">
                 
             </div>
 
         </div>
-        <div class="cont-compartir">
-            <button class="open-compartir-btn" id="openCompartir">Compartir</button>
+        <button class="open-compartir-btn" id="openCompartir">Compartir</button>
+        <div class="cont-compartir" id="Cont-Compartir">
+            
             <div class="info-compartir" id="info-compartir">
-                <button class="close-compartir-btn" id="closeCompartir">X</button>
-                <h3>Compartir</h3>
+                <button class="close-compartir-btn" id="closeCompartir"><h2>X</h2></button>
+                <h2 class="compartirtext">Compartir</h2>
+                <hr class="linea-blanca">
                 <div class="cont-iconos-compartir">
                     <div class="cont-iconosYtitulo">
                          <img src="assets/iconos/Facebook.svg" alt="">
@@ -100,6 +105,7 @@
                 <button class="copy-btn">Copiar</button>
 
             </div>
+            <hr class="linea-blanca mt">
            </div> 
         </div>
         <div class="como-jugar">
@@ -122,106 +128,154 @@
             </div>
             
         </div>
-        <div class="cont-comentarios">
-            <h3>Comentarios</h3>
-            <p>Tu calificación ayuda a que los mejores juegos aparezcan en nuestra sección de “Más Populares”. ¡Haz tu voz escuchada!</p>
-            <div class="comentario">
-                <div class="titulo-comentario">
-                    <h5>Tú</h5>
-                </div>
-                <div class="info-cometario">
-                    <p>¿Qué opinas sobre este juego?</p>
-                    <button class="post-comentario-btn">POST</button>
-                </div>
-            </div>
-        </div>
-  
-    </div>
-    <footer class="footer">
-        <div class="footer-column">
-            <h2>Acerca de nosotros</h2>
-            <ul>
-                <li>Quiénes somos</li>
-                <li>Historia de la empresa</li>
-                <li>Misión y visión</li>
-                <li>Contacto</li>
-                <li>Trabaja con nosotros</li>
-            </ul>
-            <h2>Legal</h2>
-            <ul>
-                <li>Términos y condiciones</li>
-                <li>Políticas de privacidad</li>
-                <li>Políticas de cookies</li>
-                <li>Derechos de autor</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h2>Ubicación</h2>
-            <ul>
-                <li>Nuestras oficinas</li>
-                <li>Sucursales</li>
-                <li>Mapa</li>
-            </ul>
-            <h2>Soporte y comunidad</h2>
-            <ul>
-                <li>Centro de ayuda</li>
-                <li>Reembolso y devoluciones</li>
-                <li>Soporte técnico</li>
-                <li>Foros de la comunidad</li>
-                <li>Eventos y torneos</li>
-                <li>Productos y servicios</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h2>Recursos</h2>
-            <ul>
-                <li>Descargas</li>
-                <li>Tutoriales</li>
-                <li>Foros</li>
-                <li>Webinars</li>
-                <li>API & Integraciones</li>
-            </ul>
-            <h2>Enlaces rápidos</h2>
-            <ul>
-                <li>Preguntas Frecuentes (FAQ)</li>
-                <li>Términos y condiciones</li>
-                <li>Actualizaciones y parches</li>
-                <li>Descargas de juegos</li>
-                <li>Mapa del sitio</li>
-                <li>Soporte</li>
-                <li>Ayuda en línea</li>
-                <li>Manuales y guías</li>
-                <li>Políticas de devolución</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h2>Comunidad</h2>
-            <ul>
-                <li>Blog</li>
-                <li>Noticias</li>
-                <li>Eventos</li>
-                <li>Testimonios</li>
-                <li>Casos de éxito</li>
-                <li>Conéctate con nosotros</li>
-                <li>Suscripción al boletín informativo</li>
-                <li>2494-545454</li>
-            </ul>
-            <h2>Servicios</h2>
-            <ul>
-                <li>Catálogo</li>
-                <li>Precios</li>
-                <li>Promociones</li>
-                <li>Clientes</li>
-                <li>Opiniones de clientes</li>
-                <li>Empresas asociadas</li>
-                <li>Programas de fidelidad</li>
-                <li>Descuentos para clientes</li>
-            </ul>
-        </div>
-    </footer>
 
+        
+            <div class="comment-section">
+                <div class="comment-box">
+                  <div class="user-info">
+                    <span class="user-icon"><i class="fa-solid fa-circle-user"></i></span>
+                    <span class="username">Tú</span>
+                  </div>
+                  <div class="rating-stars">
+                    <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                  <hr class="linea-blanca">
+                  <textarea placeholder="¿Qué opinas sobre este juego?"></textarea>
+                  <hr class="linea-blanca">
+                  <div class="rating-post">
+                    <button class="post-button">POST</button>
+                  </div>
+                </div>
+              
+                <h3><i class="fa-regular fa-clock"></i>&nbsp;&nbsp;Recientes</h3>
+              
+                <div class="comment">
+                  <div class="user-info">
+                    <span class="user-icon"><i class="fa-solid fa-circle-user"></i></span>
+                    <span class="username">Usuario111</span>
+                  </div>
+                  <hr class="linea-blanca">
+                  <p>Este nivel me tomó por sorpresa. Al principio parecía fácil, pero cuando llegué a la mitad, los enemigos empezaron a salir de todas partes. Fue un desafío real, y aunque me frustré en algunos puntos, la sensación de victoria al final lo hizo todo mucho más gratificante. ¡Me encantan los juegos que te ponen a prueba de esta manera!</p>
+                  <div class="rating-stars">
+                    <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span class="gr"><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+              
+                <div class="comment">
+                  <div class="user-info">
+                    <span class="user-icon"><i class="fa-solid fa-circle-user"></i></span>
+                    <span class="username">Usuario222</span>
+                  </div>
+                  <hr class="linea-blanca">
+                  <p>Una de las pocas quejas que tengo son los controles. A veces se sienten un poco torpes, especialmente en las secciones de plataformas más precisas. Hubo momentos en los que fallé simplemente porque el personaje no respondía como esperaba. Dicho esto, la experiencia general del juego es tan buena que estos pequeños detalles no arruinan el disfrute.</p>
+                  <div class="rating-stars">
+                    <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span class="gr"><i class="fa-solid fa-star"></i></span><span class="gr"><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+              
+                <div class="comment">
+                  <div class="user-info">
+                    <span class="user-icon"><i class="fa-solid fa-circle-user"></i></span>
+                    <span class="username">Usuario333</span>
+                  </div>
+                  <hr class="linea-blanca">
+                  <p>Muy divertido</p>
+                  <div class="rating-stars">
+                    <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span class="gr"><i class="fa-solid fa-star"></i></span><span class="gr"><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+              </div>
+              <footer>
+                <div class="container-footer">
+                    <div class="sec aboutus">
+                        <h2>About Us</h2>
+                        <ul class="items">
+                            <li><a href="#">Quiénes somos</a></li>
+                            <li><a href="#">Historia de la empresa</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Trabaja con nosotros</a></li>
+                        </ul>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Legal</h2>
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Políticas de privacidad</a></li>
+                            <li><a href="#">Políticas de cookies</a></li>
+                            <li><a href="#">Derechos de autor</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Soporte</h2>
+                        <ul>
+                            <li><a href="#">Centro de ayuda</a></li>
+                            <li><a href="#">Reembolso y devoluciones</a></li>
+                            <li><a href="#">Soporte técnico</a></li>
+                            <li><a href="#">Productos y servicios</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Recursos</h2>
+                        <ul>
+                            <li><a href="#">Descargas</a></li>
+                            <li><a href="#">Tutoriales</a></li>
+                            <li><a href="#">Foros</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">API & Integraciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Enlaces Rapidos</h2>
+                        <ul>
+                            <li><a href="#">Preguntas Frecuentes (FAQ)</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Actualizaciones y parches</a></li>
+                            <li><a href="#">Descargas de juegos</a></li>
+                            <li><a href="#">Mapa del sitio</a></li>
+                            <li><a href="#">Soporte</a></li>
+                            <li><a href="#">Ayuda en línea</a></li>
+                            <li><a href="#">Manuales y guías</a></li>
+                            <li><a href="#">Políticas de devolución</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Comunidad</h2>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Foros de la comunidad</a></li>
+                            <li><a href="#">Eventos y torneos</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec links">
+                        <h2>Servicios</h2>
+                        <ul>
+                            <li><a href="#">Catálogo</a></li>
+                            <li><a href="#">Precios</a></li>
+                            <li><a href="#">Promociones</a></li>
+                            <li><a href="#">Clientes</a></li>
+                            <li><a href="#">Opiniones de clientes</a></li>
+                            <li><a href="#">Empresas asociadas</a></li>
+                            <li><a href="#">Programas de fidelidad</a></li>
+                            <li><a href="#">Descuentos para clientes</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="Copyright">
+                <p>2024 Copyright GAMETIME. All Rights Reserved</p>
+            </div>
+         
     <script src="js/menu.js"></script>
     <script src="js/compartir.js"></script>
     <script src="https://kit.fontawesome.com/c59d1be4df.js" crossorigin="anonymous"></script>
+    <script src="js/4enlinea.js"></script>  
 </body>
 </html>
